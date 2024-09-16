@@ -7,7 +7,7 @@ on:
   schedule:
     # Cron syntax: minute hour day-of-month month day-of-week
     # This will run every Friday at 14:00 (2 PM) UTC
-    - cron: '*/2 * * * *'
+    - cron: '* * * * *'
   
   # Allow manual triggering of the workflow from the GitHub UI
   workflow_dispatch:
