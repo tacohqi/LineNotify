@@ -24,14 +24,13 @@ def main():
 
     current_day = datetime.now(ZoneInfo("Asia/Taipei")).strftime("%A")
     current_time = datetime.now(ZoneInfo("Asia/Taipei")).strftime("%H:%M:%S")
-    colored_day = f"\033[34m{current_day}\033[0m"
 
     message = f"""
     🕒 Time Check: {current_time}
-    📅 Today is {colored_day}!!!!
+    📅 Today is {current_day}!!!!
     🌟 Daily Notification:
-    
-    ✨ 1/ You should provide a weekly report! ✨
+
+    ✨ 1. You should provide a weekly report! ✨
 
     Have a great day! 😊🎉
     """
