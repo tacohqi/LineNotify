@@ -7,7 +7,7 @@ on:
   schedule:
     # Cron syntax: minute hour day-of-month month day-of-week
     # This will run every Friday at 14:00 (2 PM) UTC
-    - cron: '11 01 * * 1'
+    - cron: '*/2 * * * *'
   
   # Allow manual triggering of the workflow from the GitHub UI
   workflow_dispatch:
@@ -43,4 +43,7 @@ jobs:
         # Set the LINE_NOTIFY_TOKEN environment variable from GitHub secrets
         LINE_NOTIFY_TOKEN: ${{ secrets.LINE_NOTIFY_TOKEN }}
       # Run the Python script
-      run: python notify.py
+      run: |
+        echo "Current time: $(date)"
+        echo "Trigger event: ${{ github.event_name }}"
+        python notify.py
