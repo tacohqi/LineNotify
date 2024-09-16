@@ -3,6 +3,7 @@ import requests
 from datetime import datetime
 from dotenv import load_dotenv
 import logging
+from zoneinfo import ZoneInfo
 
 logging.basicConfig(level=logging.INFO)
 
@@ -21,7 +22,7 @@ def main():
         logging.error("Error: LINE_NOTIFY_TOKEN is not set.")
         return
 
-    current_day = datetime.now().strftime("%A")
+    current_day = datetime.now(ZoneInfo("Asia/Taipei")).strftime("%A")
     message = f"Hello! Today is {current_day}. Have a great day!"
     send_line_notify(message)
 
