@@ -23,7 +23,18 @@ def main():
         return
 
     current_day = datetime.now(ZoneInfo("Asia/Taipei")).strftime("%A")
-    message = f"Hello! Today is {current_day}. Have a great day!"
+    current_time = datetime.now(ZoneInfo("Asia/Taipei")).strftime("%H:%M:%S")
+    colored_day = f"\033[34m{current_day}\033[0m"
+
+    message = f"""
+    🕒 Time Check: {current_time}
+    📅 Today is {colored_day}!!!!
+    🌟 Daily Notification:
+    
+    ✨ 1/ You should provide a weekly report! ✨
+
+    Have a great day! 😊🎉
+    """
     send_line_notify(message)
 
 if __name__ == "__main__":
