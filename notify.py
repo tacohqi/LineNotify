@@ -31,6 +31,7 @@ def main():
     🌟 Daily Notification:
 
     ✨ 1. You should provide a weekly report! ✨
+    test
 
     Have a great day! 😊🎉
     """
